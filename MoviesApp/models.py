@@ -21,7 +21,7 @@ class Movie(models.Model):
     trendingORHighImdbratedORLatestORNone = models.CharField(max_length=500,null=True) 
     imdb = models.FloatField() 
     # file = models.FileField()           
-    image_file = models.FileField()         
+    image_file = models.CharField(max_length=500,null=True)        
     def __str__(self):
         return self.name
           
