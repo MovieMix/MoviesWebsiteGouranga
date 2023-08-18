@@ -25,13 +25,13 @@ SECRET_KEY = 'django-insecure-=#qa__tj3b45k+j$^2^s9l0tt8s(epk^+mu(xe*xwv+x^#3vhm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ ]
+ALLOWED_HOSTS = ['mixmovie.pythonanywhere.com']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    
+
     'MoviesApp.apps.MoviesappConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -117,12 +117,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
-STATICFILES_DIRS = [
-    BASE_DIR / "static"
-]
+STATIC_URL = '/static/'
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static"
+# ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+STATIC_ROOT = '/home/MixMovie/MoviesWebsiteGouranga/static'
