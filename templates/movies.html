@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+
+{% block title %}Movies{% endblock title %}
+{% block stylecss %}
+
+<style>
+    .cardesshead {
+        font-size: 30px;
+    }
+
+    hr {
+        clear: both;
+        display: block;
+        width: 25%;
+
+        background-color: orange;
+        height: 1px;
+    }
+    .movieresults{
+        display:inline-block;
+        padding:10px;
+        margin:10px;
+    }
+    /* 184*273 */
+    .imagesearch{
+        width:184px;
+        height:273px;
+    
+    }
+    b{
+        font-size: 20px;
+        text-align: center;
+    }
+    .ram{
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+
+    .card-body{
+        height:90px;
+    }
+</style>
+
+{% endblock stylecss %}
+{% block body %}
+<section>
+    <div class="cardesshead">
+        <br>
+        Trending
+        <hr align="left">
+    </div>
+    {% for x in trend %}
+    <div class="movieresults">
+        <div class="card bg-dark" style="width:min-content">
+            <a href="{{ x.movielinkonwebsite }}">
+                <img class="card-img-top imagesearch" src="{{ x.image_file.url}}" alt="Card image cap">
+            </a>
+            <div class="card-body">
+                <p class="card-text"><b>{{x.name}}</b></p>
+            </div>
+        </div>
+    
+    
+    </div>
+    
+    {% endfor %}
+
+
+
+
+
+
+
+
+    <div class="cardesshead">
+        <br>
+        Latest
+        <hr align="left">
+    </div>
+    {% for x in latest %}
+    <div class="movieresults">
+        <div class="card bg-dark" style="width:min-content">
+            <a href="{{ x.movielinkonwebsite }}">
+                <img class="card-img-top imagesearch" src="{{ x.image_file.url}}" alt="Card image cap">
+            </a>
+            <div class="card-body">
+                <p class="card-text"><b>{{x.name}}</b></p>
+            </div>
+        </div>
+    
+    
+    </div>
+    
+    {% endfor %}
+
+
+
+    <div class="cardesshead">
+        <br>
+        High IMDB rated
+        <hr align="left">
+    </div>
+    {% for x in highimdb %}
+    <div class="movieresults">
+        <div class="card bg-dark" style="width:min-content">
+            <a href="{{ x.movielinkonwebsite }}">
+                <img class="card-img-top imagesearch" src="{{ x.image_file.url}}" alt="Card image cap">
+            </a>
+            <div class="card-body">
+                <p class="card-text"><b>{{x.name}}</b></p>
+            </div>
+        </div>
+    
+    
+    </div>
+    
+    {% endfor %}
+
+
+
+
+    <div class="cardesshead">
+        <br>
+        Newly Added
+        <hr align="left">
+    </div>
+    {% for x in newadded %}
+    <div class="movieresults">
+        <div class="card bg-dark" style="width:min-content">
+            <a href="{{ x.movielinkonwebsite }}">
+                <img class="card-img-top imagesearch" src="{{ x.image_file.url}}" alt="Card image cap">
+            </a>
+            <div class="card-body">
+                <p class="card-text"><b>{{x.name}}</b></p>
+            </div>
+        </div>
+    
+    
+    </div>
+    
+    {% endfor %}
+
+    
+
+</section>
+{% endblock body %}

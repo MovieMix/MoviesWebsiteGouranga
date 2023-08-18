@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}Search{% endblock title %}
+
+{% block stylecss %}
+<style>
+    .movieresults{
+        display:inline-block;
+        padding:10px;
+        margin:10px;
+    }
+    /* 184*273 */
+    .imagesearch{
+        width:184px;
+        height:273px;
+    
+    }
+    b{
+        font-size: 20px;
+        text-align: center;
+    }
+    .ram{
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+
+    .card-body{
+        height:90px;
+    }
+
+</style>
+{% endblock stylecss %}
+
+
+{% block body %}
+
+<section>
+<p class="ram">Showing Results for "{{ search }}"</p>
+  {% for x in movieresult %}
+    <div class="movieresults">
+        <div class="card bg-dark" style="width:min-content">
+            <a href="{{ x.movielinkonwebsite }}">
+                <img class="card-img-top imagesearch" src="{{ x.image_file.url}}" alt="Card image cap">
+            </a>
+            <div class="card-body">
+                <p class="card-text"><b>{{x.name}}</b></p>
+            </div>
+        </div>
+
+
+    </div>
+    
+  {% endfor %}   
+</section>
+
+{% endblock body %}

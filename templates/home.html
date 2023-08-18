@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- TODO: Give a name to AppName -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="shortcut icon" href="../static/logotab.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Home | MoviesMix</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+
+
+            background-color: #360433;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%232917FF'/%3E%3Cstop offset='1' stop-color='%23360433'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%23FF1C73' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23FF1C73' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.4'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
+            background-attachment: fixed;
+            background-size: cover;
+            margin: 0px;
+            padding: 0px;
+            color: white;
+        }
+
+        .section {
+            background-color: rgba(0, 0, 0, 0.7);
+            margin: 15px;
+            border: 15px;
+            border-radius: 10px;
+            padding: 80px;
+        }
+
+
+
+        .logoimg {
+            width: 11vw;
+        }
+
+        nav {
+            background-color: white;
+            color: black;
+            padding: 2vw;
+            display: flex;
+            justify-content: space-between;
+            align-self: center;
+            align-items: center;
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+            z-index: 2;
+            /* top: 1px;
+            left: 1px; */
+
+        }
+
+        .navtt {
+            /* padding-left: 10vw;
+            padding-right: 10vw; */
+            font-size: 1.5vw;
+            display: flex;
+            color: black;
+            background-color: rgba(255, 255, 255);
+            transition: all 0.5s ease-in-out 0s;
+            padding: 10px;
+            padding-top: 0.5vw;
+            padding-bottom: 0.5vw;
+            border-radius: 5px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .navtt:hover {
+            color: aqua;
+            background-color: rgba(0, 0, 0, 0.7);
+            cursor: pointer;
+        }
+
+        .navtools {
+            display: flex;
+
+        }
+
+        /* BODY */
+        .type {
+            font-size: 40px;
+            /* text-align: center; */
+            /* padding: 2.5px; */
+            /* margin: 30px; */
+            margin-bottom: 20vh;
+            max-width: fit-content;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typewriter 2s linear infinite alternate,
+                blink 530ms ease-in-out infinite normal;
+            border-right: 2.5px solid orange;
+
+            /* display: none; */
+
+        }
+
+        @keyframes typewriter {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            from {
+                border-color: orange;
+            }
+
+            to {
+                border-color: rgba(0, 0, 0, 0);
+            }
+        }
+
+        .showcard {
+            margin: 5vh;
+            width: 28.2%;
+        }
+
+        .cardess {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-self: center;
+            align-items: center;
+            /* color:black; */
+
+        }
+
+        .cardesshead {
+            font-size: 30px;
+        }
+
+        hr {
+            clear: both;
+            display: block;
+            width: 25%;
+
+            background-color: orange;
+            height: 1px;
+        }
+
+        .faqs {
+            padding: 20px;
+        }
+
+        .btn-link {
+            color: white;
+            transition: all 0.5s ease-in-out 0s;
+
+        }
+
+        .btn-link:hover {
+            color: aqua;
+            text-decoration: none;
+        }
+
+        .aboutcardus {
+            border: none;
+        }
+
+        b,
+        strong {
+            font-size: 20px;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: aqua;
+            /* background-color: rgba(0, 0, 0, 0.7); */
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn-warning {
+            background-color: orange;
+        }
+
+        form {
+            max-width: 40%;
+        }
+
+        .card-text {
+            padding: 10px;
+        }
+        .logogood{
+            transition: all 0.5s ease-in-out 0s;
+        }
+        .logogood:hover{
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+        .qut{
+           font-size: 20px; 
+        }
+        .mut{
+           font-size: 18px; 
+        }
+        .dropbtn {
+            background-color: white;
+            color: black;
+            /* padding: 10px; */
+            /* font-size: 16px; */
+            border: none;
+            
+        }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Change the background color of the dropdown button when the dropdown content is shown */
+        .dropdown:hover .dropbtn {
+            color: aqua;
+            background-color: rgba(0, 0, 0, 0.7);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="navtools"><a href="/" class="logogood">
+                <img class="logoimg" src="../static/logo.png" alt="Logo">
+            </a></div>
+        <div class="navtools">
+            <div class="navtt"><a href="/home">Home</a></div>
+            <div class="navtt"><a href="/">Movies</a></div>
+            <div class="dropdown navtt">
+                <button class="dropbtn">Genre</button>
+                <div class="dropdown-content">
+                    <a href="/search/?search=action">Action</a>
+                    <a href="/search/?search=drama">Drama</a>
+                    <a href="/search/?search=comedy">Comedy</a>
+                    <a href="/search/?search=fantasy">Fantasy</a>
+                    <a href="/search/?search=history">History</a>
+                    <a href="/search/?search=horror">Horror</a>
+                    <a href="/search/?search=biography">Biography</a>
+                </div>
+            </div>
+            <div class="dropdown navtt">
+                <button class="dropbtn">Country</button>
+                <div class="dropdown-content">
+                    <a href="/search/?search=usa">USA</a>
+                    <a href="/search/?search=india">India</a>
+                    <a href="/search/?search=south+korea">South Korea</a>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+    <div class="section">
+
+        <div class="type" id="type">
+            Welcome To MoviesMix!
+        </div>
+        <div class="cardesshead">
+            Why Choose Us?
+            <hr align="left">
+        </div>
+        <div class="cardess">
+
+            <div class="card bg-dark showcard" style="width: 18rem;">
+                <img src="../static/bg-1home.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">There are absolutely zero ads on our site. Once you hit on the play button, you
+                        can start streaming right away, without
+                        any interruptions in the middle.At MoviesJoy, we understand that your experience comes first.
+                        Therefore, we try our best to listen to our users. Should
+                        there be any issue, please feel free to send us a message. Or if you cannot find a movie or TV
+                        show of interest, we are
+                        also on all ear to get your request(in the form below).</p>
+                </div>
+            </div>
+            <div class="card bg-dark showcard" style="width: 18rem;">
+                <img src="../static/bg-2home.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">With over 10,000 titles, MoviesJoy is confident to provide you whatever you are
+                        looking for. We update new movies and TV
+                        episodes on a daily basis and per request to make sure our users can catch up with the cinematic
+                        world as well as find
+                        gems that others recommend. We have almost everything, from Hollywood blockbusters to regional
+                        indies, from the latest
+                        releases to the oldies of your childhood. No matter what title comes to your mind, you are
+                        highly likely to find it
+                        here.</p>
+                </div>
+            </div>
+            <div class="card bg-dark showcard" style="width: 18rem;">
+                <img src="../static/bg-3home.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">MoviesJoy should be as easy as Google to browse and navigate. If you already
+                        have a title in mind, simply enter the
+                        keywords in the search box at the top of the site. Or if you are looking for something that
+                        catches your eye, you can
+                        use the site's categories to search or scroll down for our suggestions.We have tried our best to
+                        serve you the best dish of ours.The design and flow is smooth.It hardly takes a minute to get
+                        the download link from our website.<br>No redirections.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="cardesshead">
+            <br>
+            About Us
+            <hr align="left">
+        </div>
+        <div class="aboutus">
+            <div class="card bg-dark">
+                <div class="card-body aboutcardus">
+                    <strong>
+                        Watch Free HD Movies and TV Series online on MoviesMix - MoviesMix.in
+
+                    </strong><br><br>
+
+                    MoviesMix is where you find the saying "Happiness costs nothing" correct. All the movies on
+                    our site are free to watch,
+                    in HD quality, with subtitles, and there is no need for a signup or any subscription.
+                    If it is what you are looking for, give us a shot to convince you!<br><br>
+
+                    <b>What is MoviesMix?</b><br><br>
+                    MoviesMix is a streaming website where you can find almost any title that comes to mind to
+                    stream or download. We
+                    provide free movies and TV shows for every genre and occasion such as Action, Comedy, History,
+                    Thriller, Sports... New
+                    titles are updated on a daily basis to make sure you never need to leave.
+                    MoviesMix is one of the biggest gems you can find when it comes to free online movie
+                    streaming. More than ten thousands
+                    of titles are free for you to watch online or download with zero ads. Normally movie enthusiasts
+                    have to pay for paid
+                    content or sit through multiple ads and popups, but at MoviesMix, all you need is the
+                    Internet, a device, and your time
+                    to enjoy our contents.<br><br>
+
+                    
+
+                    <b>Alternative to MoviesMix?</b><br><br>
+                    If for some reasons you can't access MoviesMix.to website to watch free HD Movies, you can
+                    try other best alternative to
+                    MoviesMix such as Himovies, ev01, tinyzone... etc<br><br>
+
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="cardesshead">
+            <br>
+            FAQs
+            <hr align="left">
+        </div>
+        <div class="faqs">
+            <div class="accordion" id="accordionExample">
+                <div class="card bg-dark cardfaqs">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link qut collapsed" type="button" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                Is our website completly free?
+                            </button>
+                        </h5>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show mut" aria-labelledby="headingOne"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            Ans : Yes! you can use our website to download movies or to watch movies for completly free and we have very few ads on our
+                            website.
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-dark cardfaqs">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed qut " type="button" data-toggle="collapse"
+                                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Will I get a virus by downloading one of the movies?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body mut">
+                            Ans : No! the movies are completly free to download and do not contain any virus our suspicious malware which might harm your
+                            device or still your infomation.
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-dark cardfaqs">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed qut" type="button" data-toggle="collapse"
+                                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                I cannot find my favorite movie on your website.
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse mut" aria-labelledby="headingThree"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            Ans : You can help us by knowing your favorite movies through our forms.We will try our best to add your favorite movie as
+                            soon as possible.
+                        </div>
+                    </div>
+                    <div class="card bg-dark cardfaqs">
+                        <div class="card-header" id="headingThree">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed qut" type="button" data-toggle="collapse"
+                                    data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Is our website legal?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseFour" class="collapse mut" aria-labelledby="headingFour"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                Ans : Yes our website is completly legal.As we provide these movies from different sources from the internet.Read our
+                                2022-2023 © Terms of Conditions, Services, DMCA (Instant Removal).
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cardesshead">
+            <br>
+            Review or Movie Suggestions
+            <hr align="left">
+        </div>
+        <form method="post" action="/home/">
+            {% csrf_token %}
+            <div class="form-group ">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" name="name">
+            </div>
+            <div class="form-group ">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your Email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="review">Review or Movie Suggestions</label>
+                <textarea class="form-control" id="review" rows="3" name="review"></textarea>
+            </div>
+            <button type="submit" class="btn btn-warning">Submit</button>
+        </form>
+    </div>
+    <footer>
+        <a href="https://anotepad.com/notes/kc3jn3ts" class="toc" target="_blank">2022-2023 © Terms of Conditions,
+            Services, DMCA (Instant Removal)</a>
+    </footer>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script>
+        setInterval(change1, 4000);
+
+        function change1() {
+            document.getElementById("type").innerHTML = "Less Ads, More Enjoyment !";
+        }
+        setInterval(change2, 8000);
+
+        function change2() {
+            document.getElementById("type").innerHTML = "Welcome To MoviesMix!";
+        }
+        setInterval(change3, 12000);
+
+        function change3() {
+            document.getElementById("type").innerHTML = "See All Your Favourites Movies At One Place At the Cost of nothing !";
+        }
+
+    </script>
+</body>
+
+</html>

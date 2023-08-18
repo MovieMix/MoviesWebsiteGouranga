@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ moviedetails.name }}{% endblock title %}
+
+{% block stylecss %}
+<style>
+    .card {
+
+        flex-direction: row;
+    }
+
+    .card-img-top {
+        width: 295px;
+        height: 471px;
+
+    }
+
+    .details {
+        /* border: 20px solid rgba(0, 0, 0, 0.5);
+        border-radius: 5px; */
+        display: flex;
+    }
+
+    .section {
+        background-color: rgba(0, 0, 0, 0.7);
+        margin: 15px;
+        border: 15px;
+        border-radius: 10px;
+        padding: 0px;
+    }
+
+    .jumbotron {
+        height: 471px;
+        width: 100%;
+    }
+
+    #watchmovielink {
+        display: none;
+    }
+
+    .linksound {
+        color: white
+    }
+
+    .linksound:hover {
+        color: aqua
+    }
+</style>
+{% endblock stylecss %}
+
+
+{% block body %}
+
+<section>
+    <div class="details">
+
+        <img class="card-img-top" src="{{ moviedetails.image_file.url}}" alt="Card image cap">
+
+        <div class="jumbotron bg-dark ">
+            <h1 class="display-4">{{ moviedetails.name}}</h1>
+            <p class="lead">{{ moviedetails.desc}}</p>
+            <hr class="my-4">
+            <p>Release Date: {{ moviedetails.released}}<br>
+                Genre: {{ moviedetails.genre1}}, {{ moviedetails.genre2}}<br>
+                Country: {{ moviedetails.country }} <br>
+                IMDB: {{ moviedetails.imdb }}/10</p>
+            <a class="btn btn-primary btn-lg" href="#watchmovielink" role="button" onclick="myFunction()">Wacth
+                Movie</a>
+            <a class="btn btn-primary btn-lg" target="_blank" href="{{ moviedetails.downloadlDIRECTlink }}"
+                role="button">Download Movie</a>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="watch" id="watchmovielink">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="{{ moviedetails.watchmovielink  }}" allowfullscreen></iframe>
+        </div>
+        <p>Tip : Use <a href="https://chrome.google.com/webstore/detail/volume-booster/ejkiikneibegknkgimmihdpcbcedgmpo"
+                class="linksound" target="_blank">Sound Booster Extnsion</a> if sound is feeble.</p>
+    </div>
+
+
+    <script>
+        function myFunction() {
+            document.getElementById("watchmovielink").style.display = "block"
+        }
+    </script>
+</section>
+
+{% endblock body %}
