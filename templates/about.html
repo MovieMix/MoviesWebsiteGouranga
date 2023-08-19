@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock title %}
+
+{% block stylecss %}
+<style>
+    .cardesshead {
+            font-size: 30px;
+        }
+
+    hr {
+            clear: both;
+            display: block;
+            width: 25%;
+
+            background-color: orange;
+            height: 1px;
+        }
+    .songname{
+        font-size:20px;
+    }  
+    .imgofus{
+        width:25%
+    }  
+
+</style>
+{% endblock stylecss %}
+
+
+{% block body %}
+
+<section>
+    <div class="cardesshead">
+        <br>
+        Who are the creators?
+        <hr align="left">
+    </div>
+    <p>
+        This Website was created by two person named <b>Tejas</b> And <b>Gouranga</b>.<br>
+       
+    </p>
+
+    <div class="cardesshead">
+        <br>
+        Why we created this?
+        <hr align="left">
+    </div>
+    <p>
+        We were really good freinds so when we used to nightover at each others house, finding films to watch was a headache to resolve this we are here.
+    </p>
+
+    <div class="cardesshead">
+        <br>
+        Photo of the Creators.
+        <hr align="left">
+    </div>
+    <img src="../static/creators.jpg" alt="Bad Luck You can`t see this" class="imgofus">
+
+    <div class="cardesshead">
+        <br>
+        Some Favourite Songs.
+        <hr align="left">
+    </div>
+    <div class="songname">
+        Atma Rama<br><br>
+        <audio controls>        
+            <source src="../static/AtmaRam.mp3" type="audio/mp3">               
+        </audio><br><br>
+
+    </div>
+
+    <div class="songname">
+        Raghupati Raghav<br><br>
+        <audio controls>        
+            <source src="../static/Raghupati.mp3" type="audio/mp3">
+        </audio><br><br>
+
+    </div>
+    <div class="songname">
+        Siya Ram<br><br>
+        <audio controls>        
+            <source src="../static/SiyaRam.mp3" type="audio/mp3">
+        </audio><br><br>
+
+    </div >
+    <div class="songname">
+        Sita Ram Sita Ram Kahiye<br><br>
+        <audio controls>        
+            <source src="../static/RamKahiye.mp3" type="audio/mp3">               
+        </audio><br><br>
+
+    </div>
+    
+</section>
+
+{% endblock body %}

@@ -43,6 +43,9 @@ def search(request):
         
 
     return render(request, "search.html",context)
+def about(request):        
+
+    return render(request, "about.html")
 
 def ohmygod(request):
     mydata = Movie.objects.filter(movielinkonwebsite = "/ohmygod/")[0]
@@ -88,6 +91,13 @@ def omg2(request):
     return render(request, "watchmovie.html",context)
 def gadar2(request):
     mydata = Movie.objects.filter(movielinkonwebsite= "/gadar2/")[0]
+    # print(mydata)
+    context = {
+            'moviedetails': mydata,
+        }
+    return render(request, "watchmovie.html",context)
+def idiots3(request):
+    mydata = Movie.objects.filter(movielinkonwebsite= "/idiots3/")[0]
     # print(mydata)
     context = {
             'moviedetails': mydata,
