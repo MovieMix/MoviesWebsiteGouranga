@@ -103,6 +103,13 @@ def idiots3(request):
             'moviedetails': mydata,
         }
     return render(request, "watchmovie.html",context)
+def kashmirfiles(request):
+    mydata = Movie.objects.filter(movielinkonwebsite= "/kashmirfiles/")[0]
+    # print(mydata)
+    context = {
+            'moviedetails': mydata,
+        }
+    return render(request, "watchmovie.html",context)
 
 
 # def moviename(request):
