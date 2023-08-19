@@ -6,10 +6,10 @@ from MoviesApp.models import Movie
 
 
 def movies(request):
-    trend = Movie.objects.filter(trendingORHighImdbratedORLatestORNone__icontains = "trend")[0:10]
-    Latest = Movie.objects.filter(trendingORHighImdbratedORLatestORNone__icontains = "Latest")[0:10]
-    highimdb = Movie.objects.filter(trendingORHighImdbratedORLatestORNone__icontains = "imdb")[0:10]
-    newadded = Movie.objects.all().order_by('-id')[0:10]
+    trend = Movie.objects.filter(trendingORHighImdbratedORLatestORNone__icontains = "trend").order_by('-id')[0:5]
+    Latest = Movie.objects.filter(trendingORHighImdbratedORLatestORNone__icontains = "Latest").order_by('-id')[0:5]
+    highimdb = Movie.objects.filter(trendingORHighImdbratedORLatestORNone__icontains = "imdb").order_by('-id')[0:5]
+    newadded = Movie.objects.all().order_by('-id')[0:5]
     # print(mydata)
     context = {
             'trend': trend,
@@ -74,6 +74,20 @@ def it(request):
     return render(request, "watchmovie.html",context)
 def it2(request):
     mydata = Movie.objects.filter(movielinkonwebsite= "/it2/")[0]
+    # print(mydata)
+    context = {
+            'moviedetails': mydata,
+        }
+    return render(request, "watchmovie.html",context)
+def omg2(request):
+    mydata = Movie.objects.filter(movielinkonwebsite= "/omg2/")[0]
+    # print(mydata)
+    context = {
+            'moviedetails': mydata,
+        }
+    return render(request, "watchmovie.html",context)
+def gadar2(request):
+    mydata = Movie.objects.filter(movielinkonwebsite= "/gadar2/")[0]
     # print(mydata)
     context = {
             'moviedetails': mydata,

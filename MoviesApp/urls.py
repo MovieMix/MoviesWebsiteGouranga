@@ -10,6 +10,8 @@ urlpatterns = [
     path('oppenheimer/', views.oppenheimer,name="oppenheimer"),
     path('rrr/', views.rrr,name="rrr"),
     path('it/', views.it,name="it"),
+    path('omg2/', views.omg2,name="omg2"),
+    path('gadar2/', views.gadar2,name="gadar2"),
     path('it2/', views.it2,name="it2")
     
 ]

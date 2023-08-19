@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-=#qa__tj3b45k+j$^2^s9l0tt8s(epk^+mu(xe*xwv+x^#3vhm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['moviemix.pythonanywhere.com']
+ALLOWED_HOSTS = ['moviemix.pythonanywhere.com','127.0.0.1:8000','127.0.0.1']
 
 
 # Application definition
