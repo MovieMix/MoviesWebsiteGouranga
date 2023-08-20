@@ -106,6 +106,20 @@ def idiots3(request):
             'moviedetails': mydata,
         }
     return render(request, "watchmovie.html",context)
+def avatar(request):
+    mydata = Movie.objects.filter(movielinkonwebsite= "/avatar/")[0]
+    # print(mydata)
+    context = {
+            'moviedetails': mydata,
+        }
+    return render(request, "watchmovie.html",context)
+def avatar2(request):
+    mydata = Movie.objects.filter(movielinkonwebsite= "/avatar2/")[0]
+    # print(mydata)
+    context = {
+            'moviedetails': mydata,
+        }
+    return render(request, "watchmovie.html",context)
 def kashmirfiles(request):
     mydata = Movie.objects.filter(movielinkonwebsite= "/kashmirfiles/")[0]
     # print(mydata)
