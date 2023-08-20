@@ -10,12 +10,14 @@ def movies(request):
     Latest = Movie.objects.filter(trendingORHighImdbratedORLatestORNone__icontains = "Latest").order_by('-id')[0:5]
     highimdb = Movie.objects.filter(trendingORHighImdbratedORLatestORNone__icontains = "imdb").order_by('-id')[0:5]
     newadded = Movie.objects.all().order_by('-id')[0:5]
+    soon = Movie.objects.filter(CompletedYESorNO__icontains = "no")
     # print(mydata)
     context = {
             'trend': trend,
             'newadded': newadded,
             'highimdb': highimdb,
             'latest': Latest,
+            'soon': soon,
         }
     return render(request, "movies.html",context)
 

@@ -142,5 +142,28 @@
 
     
 
+
+
+    <div class="cardesshead">
+        <br>
+        Soon...
+        <hr align="left">
+    </div>
+    {% for x in soon %}
+    <div class="movieresults">
+        <div class="card bg-dark" style="width:min-content">
+            <a href="{{ x.movielinkonwebsite }}">
+                <img class="card-img-top imagesearch" src="{{ x.image_file}}" alt="Card image cap">
+            </a>
+            <div class="card-body">
+                <p class="card-text"><b>{{x.name}}</b></p>
+            </div>
+        </div>
+    
+    
+    </div>
+    
+    {% endfor %}
+
 </section>
 {% endblock body %}

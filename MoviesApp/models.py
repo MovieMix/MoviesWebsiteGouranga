@@ -22,6 +22,7 @@ class Movie(models.Model):
     imdb = models.FloatField() 
     # file = models.FileField()           
     image_file = models.CharField(max_length=500,null=True)        
+    CompletedYESorNO = models.CharField(max_length=500,null=True,default='Yes')        
     def __str__(self):
         return self.name
           
