@@ -30,8 +30,9 @@
     }
 
     .jumbotron {
-        height: 471px;
+        height: auto;
         width: 100%;
+        overflow:hidden;
     }
 
     #watchmovielink {
@@ -45,6 +46,11 @@
     .linksound:hover {
         color: aqua
     }
+    @media only screen and (max-width: 897px) {
+            .card-img-top{
+                display:none;
+            }
+        }
 </style>
 {% endblock stylecss %}
 

@@ -60,8 +60,6 @@
         }
 
         .navtt {
-            /* padding-left: 10vw;
-            padding-right: 10vw; */
             font-size: 1.5vw;
             display: flex;
             color: black;
@@ -71,8 +69,8 @@
             padding-top: 0.5vw;
             padding-bottom: 0.5vw;
             border-radius: 5px;
-            margin-left: 5px;
-            margin-right: 5px;
+            margin-left: 1vw;
+            margin-right: 1vw;
         }
 
         .navtt:hover {
@@ -199,26 +197,31 @@
         .card-text {
             padding: 10px;
         }
-        .logogood{
+
+        .logogood {
             transition: all 0.5s ease-in-out 0s;
         }
-        .logogood:hover{
+
+        .logogood:hover {
             background-color: rgba(0, 0, 0, 0.5);
             border-radius: 10px;
         }
-        .qut{
-           font-size: 20px; 
+
+        .qut {
+            font-size: 20px;
         }
-        .mut{
-           font-size: 18px; 
+
+        .mut {
+            font-size: 18px;
         }
+
         .dropbtn {
             background-color: white;
             color: black;
             /* padding: 10px; */
             /* font-size: 16px; */
             border: none;
-            
+
         }
 
         /* The container <div> - needed to position the dropdown content */
@@ -261,8 +264,26 @@
             background-color: rgba(0, 0, 0, 0.7);
             cursor: pointer;
         }
-        .modal{
-            color:black;
+
+        .modal {
+            color: black;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .cardnot {
+                display:none;
+            }
+            form{
+                width:100%;
+            }
+            .form-control{
+                width:auto;
+            }
+            .toc{
+                width:100vw;
+                overflow:hidden;
+            }
+            
         }
     </style>
 </head>
@@ -273,7 +294,7 @@
                 <img class="logoimg" src="../static/logo.png" alt="Logo">
             </a></div>
         <div class="navtools">
-            <div class="navtt"><a href="/home">Home</a></div>
+            <div class="navtt"><a href="/home/">Home</a></div>
             <div class="navtt"><a href="/">Movies</a></div>
             <div class="dropdown navtt">
                 <button class="dropbtn">Genre</button>
@@ -303,13 +324,13 @@
         <div class="type" id="type">
             Welcome To MoviesMix!
         </div>
-        <div class="cardesshead">
+        <div class="cardesshead cardnot">
             Why Choose Us?
             <hr align="left">
         </div>
-        <div class="cardess">
+        <div class="cardess cardnot">
 
-            <div class="card bg-dark showcard" style="width: 18rem;">
+            <div class="card bg-dark showcard " style="width: 18rem;">
                 <img src="../static/bg-1home.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <p class="card-text">There are absolutely zero ads on our site. Once you hit on the play button, you
@@ -349,7 +370,7 @@
             </div>
 
         </div>
-        <div class="cardesshead">
+        <div class="cardesshead ">
             <br>
             About Us
             <hr align="left">
@@ -381,7 +402,7 @@
                     Internet, a device, and your time
                     to enjoy our contents.<br><br>
 
-                    
+
 
                     <b>Alternative to MoviesMix?</b><br><br>
                     If for some reasons you can't access MoviesMix.to website to watch free HD Movies, you can
@@ -394,18 +415,18 @@
                 </div>
             </div>
         </div>
-        <div class="cardesshead">
+        <div class="cardesshead cardnot">
             <br>
             FAQs
             <hr align="left">
         </div>
-        <div class="faqs">
+        <div class="faqs cardnot">
             <div class="accordion" id="accordionExample">
                 <div class="card bg-dark cardfaqs">
                     <div class="card-header" id="headingOne">
                         <h5 class="mb-0">
-                            <button class="btn btn-link qut collapsed" type="button" data-toggle="collapse" data-target="#collapseOne"
-                                aria-expanded="true" aria-controls="collapseOne">
+                            <button class="btn btn-link qut collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 Is our website completly free?
                             </button>
                         </h5>
@@ -414,7 +435,8 @@
                     <div id="collapseOne" class="collapse show mut" aria-labelledby="headingOne"
                         data-parent="#accordionExample">
                         <div class="card-body">
-                            Ans : Yes! you can use our website to download movies or to watch movies for completly free and we have very few ads on our
+                            Ans : Yes! you can use our website to download movies or to watch movies for completly free
+                            and we have very few ads on our
                             website.
                         </div>
                     </div>
@@ -430,7 +452,8 @@
                     </div>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                         <div class="card-body mut">
-                            Ans : No! the movies are completly free to download and do not contain any virus our suspicious malware which might harm your
+                            Ans : No! the movies are completly free to download and do not contain any virus our
+                            suspicious malware which might harm your
                             device or still your infomation.
                         </div>
                     </div>
@@ -447,7 +470,8 @@
                     <div id="collapseThree" class="collapse mut" aria-labelledby="headingThree"
                         data-parent="#accordionExample">
                         <div class="card-body">
-                            Ans : You can help us by knowing your favorite movies through our forms.We will try our best to add your favorite movie as
+                            Ans : You can help us by knowing your favorite movies through our forms.We will try our best
+                            to add your favorite movie as
                             soon as possible.
                         </div>
                     </div>
@@ -463,7 +487,8 @@
                         <div id="collapseFour" class="collapse mut" aria-labelledby="headingFour"
                             data-parent="#accordionExample">
                             <div class="card-body">
-                                Ans : Yes our website is completly legal.As we provide these movies from different sources from the internet.Read our
+                                Ans : Yes our website is completly legal.As we provide these movies from different
+                                sources from the internet.Read our
                                 2022-2023 © Terms of Conditions, Services, DMCA (Instant Removal).
                             </div>
                         </div>
@@ -502,53 +527,71 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Terms of Conditions, Services, DMCA (Instant Removal)</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Terms of Conditions, Services, DMCA (Instant
+                            Removal)</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
                         --DMCA Takedown--<br><br>
-                        
+
                         Please Read The DMCA Policy Before access Anything From moviemix.in<br>
                         We Are Not Upload Anything Own Self Its Automatically Copied From Similar Website.<br>
-                        This is a promotional Website only, All files and links placed here are for introducing purpose only.<br>
-                        If you are the rightful owner of any contents posted here, and object to them being displayed or If you are one of
-                        representatives of copy rights department and you don't like our conditions of store Any Problem Please Mail Us<br>
+                        This is a promotional Website only, All files and links placed here are for introducing purpose
+                        only.<br>
+                        If you are the rightful owner of any contents posted here, and object to them being displayed or
+                        If you are one of
+                        representatives of copy rights department and you don't like our conditions of store Any Problem
+                        Please Mail Us<br>
                         (officialmoviemix@gmail.com) We will remove it in 24 hour!.<br><br>
-                        
-                        
+
+
                         --Terms and Conditions,Services--<br><br>
-                        
-                        These terms and conditions outline the rules and regulations for the use of Movie Mix's Website, located at
+
+                        These terms and conditions outline the rules and regulations for the use of Movie Mix's Website,
+                        located at
                         www.moviemix.in.<br><br>
-                        
-                        By accessing this website we assume you accept these terms and conditions. Do not continue to use moviemix.in if you do
+
+                        By accessing this website we assume you accept these terms and conditions. Do not continue to
+                        use moviemix.in if you do
                         not agree to take all of the terms and conditions stated on this page.<br><br>
-                        
-                        The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all
-                        Agreements: "Client", "You" and "Your" refers to you, the person log on this website and compliant to the Company's
-                        terms and conditions. "The Company", "Ourselves", "We", "Our" and "Us", refers to our Company. "Party", "Parties", or
-                        "Us", refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment
-                        necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express
-                        purpose of meeting the Client's needs in respect of provision of the Company's stated services, in accordance with and
-                        subject to, prevailing law of in. Any use of the above terminology or other words in the singular, plural,
-                        capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.
+
+                        The following terminology applies to these Terms and Conditions, Privacy Statement and
+                        Disclaimer Notice and all
+                        Agreements: "Client", "You" and "Your" refers to you, the person log on this website and
+                        compliant to the Company's
+                        terms and conditions. "The Company", "Ourselves", "We", "Our" and "Us", refers to our Company.
+                        "Party", "Parties", or
+                        "Us", refers to both the Client and ourselves. All terms refer to the offer, acceptance and
+                        consideration of payment
+                        necessary to undertake the process of our assistance to the Client in the most appropriate
+                        manner for the express
+                        purpose of meeting the Client's needs in respect of provision of the Company's stated services,
+                        in accordance with and
+                        subject to, prevailing law of in. Any use of the above terminology or other words in the
+                        singular, plural,
+                        capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to
+                        same.
                         <br><br>
                         Cookies<br>
-                        We employ the use of cookies. By accessing moviemix.in, you agreed to use cookies in agreement with the Movie Mix's
+                        We employ the use of cookies. By accessing moviemix.in, you agreed to use cookies in agreement
+                        with the Movie Mix's
                         Privacy Policy.<br><br>
-                        
-                        Most interactive websites use cookies to let us retrieve the user's details for each visit. Cookies are used by our
-                        website to enable the functionality of certain areas to make it easier for people visiting our website. Some of our
+
+                        Most interactive websites use cookies to let us retrieve the user's details for each visit.
+                        Cookies are used by our
+                        website to enable the functionality of certain areas to make it easier for people visiting our
+                        website. Some of our
                         affiliate/advertising partners may also use cookies.<br><br>
-                        
+
                         Motive<br>
                         Let Even Poor people Enjoy Movies..<br>
                         Less ads, More Enjoyment<br><br><br>
-                        
-                        
-                        As long as the website and the information and services on the website are provided free of charge, we will not be
+
+
+                        As long as the website and the information and services on the website are provided free of
+                        charge, we will not be
                         liable for any loss or damage of any nature.<br>
                     </div>
                     <div class="modal-footer">
