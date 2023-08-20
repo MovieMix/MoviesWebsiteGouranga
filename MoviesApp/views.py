@@ -37,6 +37,7 @@ def search(request):
         search = request.GET.get("search")
         print(search)
         mydata = Movie.objects.filter(name__icontains=search) | Movie.objects.filter(genre1__icontains=search) | Movie.objects.filter(genre2__icontains=search) | Movie.objects.filter(country__icontains=search)| Movie.objects.filter(trendingORHighImdbratedORLatestORNone__icontains=search)
+        mydata = mydata.order_by('-id')[0:5]
         context = {
             
             'movieresult': mydata,
