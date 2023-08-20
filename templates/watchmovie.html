@@ -14,7 +14,9 @@
         height: 471px;
 
     }
-
+    .jumbotron{
+        height: 471px;
+    }
     .details {
         /* border: 20px solid rgba(0, 0, 0, 0.5);
         border-radius: 5px; */
@@ -29,11 +31,7 @@
         padding: 0px;
     }
 
-    .jumbotron {
-        height: auto;
-        width: 100%;
-        overflow:hidden;
-    }
+
 
     #watchmovielink {
         display: none;
@@ -46,11 +44,18 @@
     .linksound:hover {
         color: aqua
     }
+
     @media only screen and (max-width: 897px) {
-            .card-img-top{
-                display:none;
-            }
+        .card-img-top {
+            display: none;
         }
+
+        .jumbotron {
+            height: auto;
+            width: 100%;
+            overflow: hidden;
+        }
+    }
 </style>
 {% endblock stylecss %}
 
