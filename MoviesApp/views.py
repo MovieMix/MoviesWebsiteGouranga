@@ -122,7 +122,7 @@ def avatar2(request):
     return render(request, "watchmovie.html",context)
 def pushpa2(request):
     mydata = Movie.objects.filter(movielinkonwebsite= "/pushpa2/")[0]
-    # print(mydata)
+    print(mydata)
     context = {
             'moviedetails': mydata,
         }
