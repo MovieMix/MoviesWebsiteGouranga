@@ -270,8 +270,8 @@
         }
 
         @media only screen and (max-width: 600px) {
-            .cardnot {
-                display:none;
+            .card-header {
+                overflow:hidden;    
             }
             form{
                 width:100%;
@@ -285,9 +285,17 @@
             }
             
 
-            section {
+            .section {
                 padding: 30px !important;
                 margin: 5px !important;
+            }
+            .navtt{
+                font-size:18px; 
+                padding:5px;
+                margin:5px;
+            }
+            .imggood{
+                display:none;
             }
            
             
@@ -297,10 +305,10 @@
 
 <body>
     <nav>
-        <div class="navtools"><a href="/" class="logogood">
+        <div class="navtools imggood"><a href="/" class="logogood">
                 <img class="logoimg" src="../static/logo.png" alt="Logo">
             </a></div>
-        <div class="navtools">
+        <div class="navtools secondnav">
             <div class="navtt"><a href="/home/">Home</a></div>
             <div class="navtt"><a href="/">Movies</a></div>
             <div class="dropdown navtt">

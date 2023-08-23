@@ -69,20 +69,7 @@
 
         }
 
-        @media only screen and (max-width: 600px) {
-            .logoimg {
-                display: none;
-            }
-
-            .submitbtnxyz {
-                display: none;
-            }
-
-            section {
-                padding: 30px !important;
-                margin: 5px !important;
-            }
-        }
+       
 
         .navtt {
             font-size: 1.5vw;
@@ -186,6 +173,28 @@
             background-color: rgba(0, 0, 0, 0.7);
             cursor: pointer;
         }
+
+         @media only screen and (max-width: 600px) {
+            .logoimg {
+                display: none;
+            }
+
+            .submitbtnxyz {
+                display: none;
+            }
+
+            section {
+                padding: 30px !important;
+                margin: 5px !important;
+            }
+            .navtt{
+                font-size:15px; 
+                
+            }
+            .movies{
+                display:none;
+            }
+        }
     </style>
 
 </head>
@@ -198,7 +207,7 @@
                 </a></div>
 
             <div class="navtt"><a href="/home/">Home</a></div>
-            <div class="navtt"><a href="/">Movies</a></div>
+            <div class="navtt movies"><a href="/">Movies</a></div>
             <div class="dropdown navtt">
                 <button class="dropbtn">Genre</button>
                 <div class="dropdown-content">
