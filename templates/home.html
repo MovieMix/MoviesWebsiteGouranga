@@ -312,6 +312,7 @@
             position: fixed;
             bottom:5px;
             right:5px;
+            /* display:block; */
         }
     </style>
 </head>
@@ -547,10 +548,10 @@
             <button type="submit" class="btn btn-warning">Submit</button>
         </form>
     </div>
-    <div class="intro" id="intro" onended="close()">
+    <div class="intro" id="idas" >
         <!-- <iframe src="https://drive.google.com/file/d/1YPHxnqCs10WzX7FKsS3WDBnFdDQDI7_G/preview" width="400" height="250"
-            allow="autoplay"></iframe> -->
-            <video width="400" height="250" autoplay preload="auto">
+            allow="autoplay" id="idass"></iframe> -->
+            <video width="400" height="250" autoplay preload="auto" onended="myFunction()">
                 <source src="../static/LogoReveal.mp4" type="video/mp4">
             </video>
 
@@ -669,9 +670,11 @@
             document.getElementById("type").innerHTML = "See All Your Favourites Movies At One Place At the Cost of nothing !";
         }
         
-        function close() {
-                document.getElementById('intro').style.display = "None";
+        function myFunction() {
+                document.getElementById("idas").style.display = "None";
             }
+
+            
     </script>
 </body>
 
