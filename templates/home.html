@@ -302,8 +302,16 @@
             .imggood {
                 display: none;
             }
+            .intro{
+                display:none;
+            }
 
 
+        }
+        .intro{
+            position: fixed;
+            bottom:5px;
+            right:5px;
         }
     </style>
 </head>
@@ -538,6 +546,14 @@
             </div>
             <button type="submit" class="btn btn-warning">Submit</button>
         </form>
+    </div>
+    <div class="intro">
+        <!-- <iframe src="https://drive.google.com/file/d/1YPHxnqCs10WzX7FKsS3WDBnFdDQDI7_G/preview" width="400" height="250"
+            allow="autoplay"></iframe> -->
+            <video width="400" height="250" autoplay preload="auto">
+                <source src="../static/LogoReveal.mp4" type="video/mp4">
+            </video>
+
     </div>
     <footer>
         <button type="button" class="btn btn-primary toc" data-toggle="modal" data-target="#exampleModal">
