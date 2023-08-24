@@ -302,17 +302,24 @@
             .imggood {
                 display: none;
             }
-            .intro{
-                display:none;
+
+            .intro {
+                display: none;
             }
 
 
         }
-        .intro{
+
+        .intro {
             position: fixed;
-            bottom:5px;
-            right:5px;
+            bottom: 0px;
+            right: 0px;
+            width: 100vw;
+            height: 100vh;
+            z-index: 2;
+            background-color: #6C4B86
             /* display:block; */
+
         }
     </style>
 </head>
@@ -548,14 +555,14 @@
             <button type="submit" class="btn btn-warning">Submit</button>
         </form>
     </div>
-    <div class="intro" id="idas" >
-        <!-- <iframe src="https://drive.google.com/file/d/1YPHxnqCs10WzX7FKsS3WDBnFdDQDI7_G/preview" width="400" height="250"
-            allow="autoplay" id="idass"></iframe> -->
-            <video width="400" height="250" autoplay muted preload="auto" onended="myFunction()">
-                <source src="../static/LogoReveal.mp4" type="video/mp4">
-            </video>
 
-    </div>
+    <!-- <iframe src="https://drive.google.com/file/d/1YPHxnqCs10WzX7FKsS3WDBnFdDQDI7_G/preview" width="400" height="250"
+            allow="autoplay" id="idass"></iframe> -->
+    <video autoplay muted preload="auto" onended="myFunction()" onclick="myFunction()" class="intro" id="idas">
+        <source src="../static/LogoReveal.mp4" type="video/mp4">
+    </video>
+
+
     <footer>
         <button type="button" class="btn btn-primary toc" data-toggle="modal" data-target="#exampleModal">
             2022-2023 © Terms of Conditions, Services, DMCA (Instant Removal)
@@ -669,12 +676,12 @@
         function change3() {
             document.getElementById("type").innerHTML = "See All Your Favourites Movies At One Place At the Cost of nothing !";
         }
-        
-        function myFunction() {
-                document.getElementById("idas").style.display = "None";
-            }
 
-            
+        function myFunction() {
+            document.getElementById("idas").style.display = "None";
+        }
+
+
     </script>
 </body>
 
