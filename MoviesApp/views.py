@@ -71,6 +71,13 @@ def rrr(request):
             'moviedetails': mydata,
         }
     return render(request, "watchmovie.html",context)
+def Interstellar(request):
+    mydata = Movie.objects.filter(movielinkonwebsite = "/Interstellar/")[0]
+    # print(mydata)
+    context = {
+            'moviedetails': mydata,
+        }
+    return render(request, "watchmovie.html",context)
 def it(request):
     mydata = Movie.objects.filter(movielinkonwebsite = "/it/")[0]
     # print(mydata)
@@ -129,6 +136,13 @@ def pushpa2(request):
     return render(request, "watchmovie.html",context)
 def kashmirfiles(request):
     mydata = Movie.objects.filter(movielinkonwebsite= "/kashmirfiles/")[0]
+    # print(mydata)
+    context = {
+            'moviedetails': mydata,
+        }
+    return render(request, "watchmovie.html",context)
+def pushpa(request):
+    mydata = Movie.objects.filter(movielinkonwebsite= "/pushpa/")[0]
     # print(mydata)
     context = {
             'moviedetails': mydata,
