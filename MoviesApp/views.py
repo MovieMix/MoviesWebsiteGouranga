@@ -134,6 +134,20 @@ def kashmirfiles(request):
             'moviedetails': mydata,
         }
     return render(request, "watchmovie.html",context)
+def raazi(request):
+    mydata = Movie.objects.filter(movielinkonwebsite= "/raazi/")[0]
+    # print(mydata)
+    context = {
+            'moviedetails': mydata,
+        }
+    return render(request, "watchmovie.html",context)
+def keralastory(request):
+    mydata = Movie.objects.filter(movielinkonwebsite= "/keralastory/")[0]
+    # print(mydata)
+    context = {
+            'moviedetails': mydata,
+        }
+    return render(request, "watchmovie.html",context)
 
 
 # def moviename(request):

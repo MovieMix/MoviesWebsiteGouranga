@@ -17,6 +17,8 @@ urlpatterns = [
     path('idiots3/', views.idiots3,name="idiots3"),
     path('avatar/', views.avatar,name="avatar"),
     path('avatar2/', views.avatar2,name="avatar2"),
+    path('keralastory/', views.keralastory,name="keralastory"),
+    path('raazi/', views.raazi,name="raazi"),
     path('pushpa2/', views.pushpa2,name="pushpa2"),
     path('it2/', views.it2,name="it2")
     
