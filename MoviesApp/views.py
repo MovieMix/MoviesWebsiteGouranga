@@ -92,6 +92,20 @@ def it2(request):
             'moviedetails': mydata,
         }
     return render(request, "watchmovie.html",context)
+def jollyllb(request):
+    mydata = Movie.objects.filter(movielinkonwebsite= "/jollyllb/")[0]
+    # print(mydata)
+    context = {
+            'moviedetails': mydata,
+        }
+    return render(request, "watchmovie.html",context)
+def jollyllb2(request):
+    mydata = Movie.objects.filter(movielinkonwebsite= "/jollyllb2/")[0]
+    # print(mydata)
+    context = {
+            'moviedetails': mydata,
+        }
+    return render(request, "watchmovie.html",context)
 def omg2(request):
     mydata = Movie.objects.filter(movielinkonwebsite= "/omg2/")[0]
     # print(mydata)
