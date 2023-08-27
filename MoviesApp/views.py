@@ -120,6 +120,27 @@ def thorragnarok(request):
             'moviedetails': mydata,
         }
     return render(request, "watchmovie.html",context)
+def captainamericathefirstavenger(request):
+    mydata = Movie.objects.filter(movielinkonwebsite = "/captainamericathefirstavenger/")[0]
+    # print(mydata)
+    context = {
+            'moviedetails': mydata,
+        }
+    return render(request, "watchmovie.html",context)
+def ironman3(request):
+    mydata = Movie.objects.filter(movielinkonwebsite = "/ironman3/")[0]
+    # print(mydata)
+    context = {
+            'moviedetails': mydata,
+        }
+    return render(request, "watchmovie.html",context)
+def avengers2012(request):
+    mydata = Movie.objects.filter(movielinkonwebsite = "/avengers2012/")[0]
+    # print(mydata)
+    context = {
+            'moviedetails': mydata,
+        }
+    return render(request, "watchmovie.html",context)
 def thor(request):
     mydata = Movie.objects.filter(movielinkonwebsite = "/thor/")[0]
     # print(mydata)
