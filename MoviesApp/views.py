@@ -85,8 +85,57 @@ def it(request):
             'moviedetails': mydata,
         }
     return render(request, "watchmovie.html",context)
+def incrediblehulk(request):
+    mydata = Movie.objects.filter(movielinkonwebsite = "/incrediblehulk/")[0]
+    # print(mydata)
+    context = {
+            'moviedetails': mydata,
+        }
+    return render(request, "watchmovie.html",context)
+def thorthedarkworld(request):
+    mydata = Movie.objects.filter(movielinkonwebsite = "/thorthedarkworld/")[0]
+    # print(mydata)
+    context = {
+            'moviedetails': mydata,
+        }
+    return render(request, "watchmovie.html",context)
+def captainamericathewintersoldie(request):
+    mydata = Movie.objects.filter(movielinkonwebsite = "/captainamericathewintersoldie/")[0]
+    # print(mydata)
+    context = {
+            'moviedetails': mydata,
+        }
+    return render(request, "watchmovie.html",context)
+def thorloveandthunder(request):
+    mydata = Movie.objects.filter(movielinkonwebsite = "/thorloveandthunder/")[0]
+    # print(mydata)
+    context = {
+            'moviedetails': mydata,
+        }
+    return render(request, "watchmovie.html",context)
+def thorragnarok(request):
+    mydata = Movie.objects.filter(movielinkonwebsite = "/thorragnarok/")[0]
+    # print(mydata)
+    context = {
+            'moviedetails': mydata,
+        }
+    return render(request, "watchmovie.html",context)
+def thor(request):
+    mydata = Movie.objects.filter(movielinkonwebsite = "/thor/")[0]
+    # print(mydata)
+    context = {
+            'moviedetails': mydata,
+        }
+    return render(request, "watchmovie.html",context)
 def it2(request):
     mydata = Movie.objects.filter(movielinkonwebsite= "/it2/")[0]
+    # print(mydata)
+    context = {
+            'moviedetails': mydata,
+        }
+    return render(request, "watchmovie.html",context)
+def ninele(request):
+    mydata = Movie.objects.filter(movielinkonwebsite= "/ninele/")[0]
     # print(mydata)
     context = {
             'moviedetails': mydata,
