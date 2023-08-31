@@ -148,8 +148,27 @@ def thor(request):
             'moviedetails': mydata,
         }
     return render(request, "watchmovie.html",context)
+def ironman(request):
+    mydata = Movie.objects.filter(movielinkonwebsite = "/ironman/")[0]
+    # print(mydata)
+    context = {
+            'moviedetails': mydata,
+        }
+    return render(request, "watchmovie.html",context)
 def it2(request):
     mydata = Movie.objects.filter(movielinkonwebsite= "/it2/")[0]
+    # print(mydata)
+    context = {
+            'moviedetails': mydata,
+        }
+def bhoolbhulaiyaa(request):
+    mydata = Movie.objects.filter(movielinkonwebsite= "/bhoolbhulaiyaa/")[0]
+    # print(mydata)
+    context = {
+            'moviedetails': mydata,
+        }
+def bhoolbhulaiyaa2(request):
+    mydata = Movie.objects.filter(movielinkonwebsite= "/bhoolbhulaiyaa2/")[0]
     # print(mydata)
     context = {
             'moviedetails': mydata,
