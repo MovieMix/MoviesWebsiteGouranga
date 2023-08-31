@@ -70,7 +70,7 @@
 <section>
     <div class="details">
 
-        <img class="card-img-top" src="{{ moviedetails.image_file}}" alt="Card image cap">
+        <img class="card-img-top" src="{{ moviedetails.image_file}}" loading="lazy" alt="Card image cap">
 
         <div class="jumbotron bg-dark ">
             <h1 class="display-4">{{ moviedetails.name}}</h1>
@@ -93,7 +93,7 @@
 
     <div class="watch" id="watchmovielink">
         <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="{{ moviedetails.watchmovielink  }}" allowfullscreen></iframe>
+            <iframe class="embed-responsive-item" src="{{ moviedetails.watchmovielink  }}" loading="lazy" allowfullscreen></iframe>
         </div>
         <p>Tip : Use <a href="https://chrome.google.com/webstore/detail/volume-booster/ejkiikneibegknkgimmihdpcbcedgmpo"
                 class="linksound" target="_blank">Sound Booster Extension</a> if sound is feeble.</p>
