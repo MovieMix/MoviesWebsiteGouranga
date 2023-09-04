@@ -28,7 +28,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['moviemix.pythonanywhere.com','127.0.0.1:8000','127.0.0.1','moviesmix.onrender.com','*']
 
-PREPEND_WWW = True
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -44,7 +44,6 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
